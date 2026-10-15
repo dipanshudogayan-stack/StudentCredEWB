@@ -53,4 +53,4 @@ On macOS/Linux, activate with `source .venv/bin/activate`.
 }
 ```
 
-> Demo project: use dummy data only. Add authentication before exposing real student data.
+

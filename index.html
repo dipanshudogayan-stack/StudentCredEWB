@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students Database</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header><h1>Students Database</h1></header>
+  <main>
+    <section class="card">
+      <h2 id="form-title">Add student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id">
+        <div class="grid">
+          <label>Full name *
+            <input id="name" required minlength="2" maxlength="100">
+          </label>
+          <label>Email *
+            <input id="email" type="email" required>
+          </label>
+          <label>Date of birth *
+            <input id="date_of_birth" type="date" required>
+          </label>
+          <label>Phone
+            <input id="phone" maxlength="20">
+          </label>
+          <label>Course
+            <input id="course" maxlength="100">
+          </label>
+          <label>Enrollment date
+            <input id="enrollment_date" type="date">
+          </label>
+          <label class="wide">Address
+            <input id="address" maxlength="255">
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" id="save-button">Add student</button>
+          <button type="button" id="cancel-button" class="secondary" hidden>Cancel edit</button>
+        </div>
+        <p id="message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Students</h2>
+        <input id="search" type="search" placeholder="Search name, email or course...">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Name</th><th>DOB</th><th>Email</th><th>Phone</th>
+              <th>Course</th><th>Address</th><th>Enrolled</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="students-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
